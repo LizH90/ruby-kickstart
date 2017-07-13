@@ -9,9 +9,5 @@
 # This time you will have to define the method, it's called: get_squares
 
 def get_squares(numbers)
-  number_array = []
-  numbers.each |n|
-    number_array << n if numbers.include? n**2
-    number_array.sort
-  end
+    numbers.select {|n| numbers.inclue? n*n}.sort
 end

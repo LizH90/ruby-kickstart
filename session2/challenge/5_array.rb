@@ -16,5 +16,5 @@
 
 
 def mod_three(numbers)
-  numbers.each do {|i| i % 3} 
+    numbers.select {|n| n % 3 != 0}.map {|n| n % 3}
 end
