@@ -5,9 +5,12 @@
 # pirates_say_arrrrrrrrr("Pirates say arrrrrrrrr")        # => "arrrrrrrr"
 
 def pirates_say_arrrrrrrrr(string)
-  string.times.do |i| i=r
-  string << i
+  output = ""
+  add_new_char = false
+  string.length.times do |c|
+  current_char = string[c]
+  output << current_char if add_new_char
+  add_new_char = (current_char == "R" || current_char == "r")
 end
-
-
-pirates_say_arrrrrrrrr("are you really learning Ruby?")
+output
+end
