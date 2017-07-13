@@ -25,7 +25,21 @@
 
 def deaf_grandma
 
+  puts "Say hi to Grandma"
+
+  while line = gets.chomp
+    break if line == "BYE"
+
+    if line = line.upcase && line != ""
+      puts "NO, NOT SINCE 1938!"
+    else
+      puts "HUH?!  SPEAK UP, SONNY!"
+    end
+  end
 end
+
+
+
 
 
 
