@@ -8,9 +8,7 @@
 
 def got_three?(elements)
 
-  got_three?.each_cons 3 do |a, b, c|
-    return true if (a==b && b==c)
+  elements.each_cons 3 do |a, b, c|
+    return true if a==b && b==c
   end
 end
-
-got_three? [1, 2, 2, 2, 3]
