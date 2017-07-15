@@ -39,7 +39,6 @@ class HTMLTag
 
   attr_accessor :name, :innerHTML, :font, :color, :multiline
 
-  # options: :multiline should be true or false
   def initialize(name, innerHTML, options=Hash.new)
     @name, @innerHTML = name, innerHTML
     self.font      = FONTS[options[:font]]
@@ -58,7 +57,7 @@ class HTMLTag
 
   def to_s
     line_end = ""
-    line_end = "\n" if multiline # remember, if options[:multiline] doesn't exist, it will return nil, and nil is false
+    line_end = "\n" if multiline
     "<#{name} #{style}>#{line_end}"   \
       "#{innerHTML.chomp}#{line_end}" \
     "</#{name}>\n"
